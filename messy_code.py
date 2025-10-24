@@ -1,11 +1,22 @@
-#this program add numbers and print the result but its really messy
+# This program adds two numbers and prints the result
 
-def addnumb(a,b):return a+b
-def main( ):
-  print("This is a simple adder program")
-  a=input("enter first number")
-  b=input("enter second number")
-  res=addnumb(int(a),int(b))
-  print("the sum is :",res)
-main( )#call the function at end
+def add_numbers(a, b):
+    """Return the sum of two numbers."""
+    return a + b
+
+def main():
+    print("This is a simple adder program")
+
+    try:
+        a = float(input("Enter the first number: "))
+        b = float(input("Enter the second number: "))
+    except ValueError:
+        print("Error: Please enter valid numbers.")
+        return
+
+    result = add_numbers(a, b)
+    print("The sum is:", result)
+
+if __name__ == "__main__":
+    main()
 # KELVIN CODE
